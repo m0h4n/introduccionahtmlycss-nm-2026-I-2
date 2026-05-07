@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Imagen con zonas clickeables</title>
@@ -35,8 +35,13 @@
           usemap="#workmap"
           width="1536"
           height="864"
+          onmousemove="
+            console.clear();
+            console.log('X:', event.offsetX, 'Y:', event.offsetY);
+          "
         />
 
+        <!-- usar console.clear() para limpiar la consola cada vez que se mueve el mouse y console.log() para mostrar las coordenadas X e Y del mouse en la consola. Esto es útil para identificar las coordenadas exactas de las áreas clickeables en la imagen. -->
         <!--         la imagen <img> trabaja aquí con la etiqueta <map> que a su vez contiene una etiqueta <area>  -->
 
         <map name="workmap">

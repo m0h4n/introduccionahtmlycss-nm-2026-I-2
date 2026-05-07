@@ -4,38 +4,37 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Wallpoet&display=swap");
 
-
-
 /* Fuentes descargadas o locales */
 
 @font-face {
   font-family: "Blair Caps";
   /*   font-weight: bold; */
-    /* src: local ("Blair Caps"); */
-  src: url("assets/fonts/BlairCaps-GvJD.ttf")
-    format("truetype");
+  /* src: local ("Blair Caps"); */
+  src: url("assets/fonts/BlairCaps-GvJD.ttf") format("truetype");
 }
-
 
 /* ------Éste estilo aplica para todos los body de todas las html del proyecto---- */
 
 body {
   margin: 100px 0 0 0;
   /* font-family: Wallpoet, serif;   */
-  font-family: Blair Caps, serif;  
+  font-family: "Blair Caps", serif;
   background-image: url("assets/images/nébula.png");
   /*   background-color: red; */
   background-size: cover;
   background-attachment: fixed;
   background-position: center; /* Center the image  */
   background-repeat: no-repeat; /* Do not repeat the image  */
+  /* background: #bd3e3e;
+  background: linear-gradient(
+    90deg,
+    rgba(189, 62, 62, 1) 0%,
+    rgba(23, 10, 10, 1) 35%,
+    rgba(237, 221, 83, 1) 100%
+  ); */
 }
 
 /*   opacity: 0.3; con div puedo manejar una imagen como fondo, a través de una clase*/
-
-
-
-
 
 .infogeneral {
   margin-top: 100px;
@@ -49,8 +48,8 @@ header {
   width: 100%;
   top: 0;
   z-index: 10;
-  /*   font-family: Lora, serif; */
-    font-family: 'Blair Caps', serif;
+  font-family: Lora, serif;
+  /* font-family: "Blair Caps", serif; */
   /*   font-family: Wallpoet, serif; */
   /*   background: rgb(2,0,36);
 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,116,121,1) 35%, rgba(236,0,255,1) 100%);
@@ -63,8 +62,6 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,116,121,1) 35%, rgb
     rgba(255, 0, 172, 1) 100%
   );
 }
-
-
 
 /* --------Estilo para todos los H1-------------*/
 
@@ -90,7 +87,6 @@ h1 {
   font-size: 100px;
 }
 
-
 /* -----------Estilo para los H2, H3, etc.--------------- */
 
 h2 {
@@ -114,15 +110,17 @@ ul {
 a {
   font-family: Wallpoet, serif;
   font-size: 80px;
+  /* text-decoration: none; */
 }
 
 li {
   float: right;
 }
 
-ul li a {/* Aquí tomamos las a que perteneces a li dentro de ul */
+ul li a {
+  /* Aquí tomamos las a que perteneces a li dentro de ul */
   font-family: Wallpoet, sans-serif;
-/*     font-family: 'Blair Caps', serif; */
+  /* font-family: "Blair Caps", serif; */
   display: block;
   color: white;
   text-align: center;
@@ -130,7 +128,6 @@ ul li a {/* Aquí tomamos las a que perteneces a li dentro de ul */
   text-decoration: none;
   font-size: 20px;
 }
-
 
 /* ----Estilo para el selector del div o los divs en html llamado id = "contenedor-imagen"---- */
 
@@ -143,16 +140,21 @@ ul li a {/* Aquí tomamos las a que perteneces a li dentro de ul */
   width: 100%;
   height: 100%;
   position: relative;
-  opacity: 0.8;
+  /* opacity: 1; */
 }
 
+/* #bowie-image {
+  opacity: 0.5;
+}
+
+#bowie-gif {
+  opacity: 1;
+}
 /* ------------- Estilo para infografía  --------------- */
 
 #info-Bowie {
-  width: 100%;
+  width: 100%; */
 }
-
-
 
 /* ----------Estilo para contenedor de iframe (video de youtube)-----------*/
 
@@ -170,14 +172,13 @@ ul li a {/* Aquí tomamos las a que perteneces a li dentro de ul */
   left: 0;
   width: 100%;
   height: 100%;
- 
 }
-  
 
-  /* ----------Estilo para párrafos-----------*/
+/* ----------Estilo para párrafos-----------*/
 
 p {
   font-family: Lora, serif;
+  /* font-family: "Blair Caps", serif; */
   margin-top: 10px;
 }
 
@@ -189,8 +190,6 @@ p {
   width: 90%;
   max-width: 700px;
 }
-
-  
 
 /* ----------Estilo para contenedor de video con iframe-----------*/
 
@@ -209,9 +208,6 @@ p {
   width: 100%;
   height: 100%;
 }
-
-
-
 
 /* pantalla dividida */
 
@@ -258,74 +254,68 @@ p {
   padding: 10px;
 }
 
-
-
-
-
 /* ------------Estilo para contenedor de botones página de botones ---------*/
 
+/*       Estados de Botón: hover, focus, active */
 
- /*       Estados de Botón: hover, focus, active */
+.button {
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  /*         display: none; no se mostraría el botón; en JS se modifica de Display none a block para Pop Ups */
+  /*         position: absolute; /*todos los botones punto 0 de origen con respecto a quién los contiene*/
+  /*         display: block; */
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 20px;
+}
 
-      .button {
-        padding: 5px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        /*         display: none; no se mostraría el botón; en JS se modifica de Display none a block para Pop Ups */
-        /*         position: absolute; /*todos los botones punto 0 de origen con respecto a quién los contiene*/
-        /*         display: block; */
-        font-size: 16px;
-        margin: 4px 2px;
-        transition-duration: 0.4s;
-        cursor: pointer;
-        border-radius: 20px;
-      }
+#button1 {
+  background-color: #4caf50;
+  color: black;
+  border: 2px solid #4caf50;
+} /* Green */
 
-      #button1 {
-        background-color: #4caf50;
-        color: black;
-        border: 2px solid #4caf50;
-      } /* Green */
+#button1:hover {
+  background-color: black;
+  color: white;
+}
 
-      #button1:hover {
-        background-color: black;
-        color: white;
-      }
+#button2 {
+  background-color: #008cba;
+  color: black;
+  border: 2px solid #008cba;
+} /* Blue */
 
-      #button2 {
-        background-color: #008cba;
-        color: black;
-        border: 2px solid #008cba;
-      } /* Blue */
+#button2:focus {
+  background-color: black;
+  color: white;
+}
 
-      #button2:focus {
-        background-color: black;
-        color: white;
-      }
+#button3 {
+  background-color: #4caf50;
+  color: black;
+  border: 2px solid #4caf50;
+} /* Green */
 
-      #button3 {
-        background-color: #4caf50;
-        color: black;
-        border: 2px solid #4caf50;
-      } /* Green */
+#button3:hover {
+  background-color: white;
+  color: black;
+}
 
-      #button3:hover {
-        background-color: white;
-        color: black;
-      }
+#button4 {
+  background-color: #008cba;
+  color: black;
+  border: 2px solid #008cba;
+} /* Blue */
 
-    #button4 {
-        background-color: #008cba;
-        color: black;
-        border: 2px solid #008cba;
-      } /* Blue */
-
-      #button4:active {
-        background-color: white;
-        color: black;
-      }
-
+#button4:active {
+  background-color: white;
+  color: black;
+}
 
 #contenedor-botones2 {
   width: 100%;
@@ -348,9 +338,13 @@ p {
   text-align: center;
   transform: translate(300px, 200px) rotate(45deg) scale(2, 2)
     skew(15deg, 15deg) rotateX(50deg) rotateY(120deg) rotateZ(90deg);
-              transition: width 2s, height 2s, background 2s, transform ease-in-out 8s;
-      transition-timing-function: ease-in-out;
-      transition-delay: 1s;
+  transition:
+    width 2s,
+    height 2s,
+    background 2s,
+    transform ease-in-out 8s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 1s;
 }
 
 #transform:hover {
