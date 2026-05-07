@@ -153,7 +153,7 @@ ul li a {
 /* ------------- Estilo para infografía  --------------- */
 
 #info-Bowie {
-  width: 100%; */
+  width: 100%;
 }
 
 /* ----------Estilo para contenedor de iframe (video de youtube)-----------*/
@@ -177,8 +177,8 @@ ul li a {
 /* ----------Estilo para párrafos-----------*/
 
 p {
-  font-family: Lora, serif;
-  /* font-family: "Blair Caps", serif; */
+  /* font-family: Lora, serif; */
+  font-family: "Blair Caps", serif;
   margin-top: 10px;
 }
 
